@@ -1,0 +1,9 @@
+{
+    "name": "Phoenix Live Page Starter App",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/umbrella",
+    "extensions": [
+        "jakebecker.elixir-ls"
+    ],
+}

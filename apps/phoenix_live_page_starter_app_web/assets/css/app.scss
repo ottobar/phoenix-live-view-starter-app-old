@@ -1,0 +1,15 @@
+/* This file is for your main application css. */
+
+/* Boostrap overrides */
+@import '~bootstrap/scss/bootstrap';
+
+/* Fontawesome 5 config */
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+
+.main {
+    margin-top: 56px;
+}

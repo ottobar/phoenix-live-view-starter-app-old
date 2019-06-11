@@ -1,0 +1,114 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "label": "Tests",
+            "type": "shell",
+            "command": "mix test",
+            "problemMatcher": [],
+            "options": {
+                "env": {
+                    "MIX_ENV": "test"
+                }
+            }
+        },
+        {
+            "label": "Guard",
+            "type": "shell",
+            "command": "mix guard",
+            "problemMatcher": [],
+            "options": {
+                "env": {
+                    "MIX_ENV": "test"
+                }
+            }
+        },
+        {
+            "label": "Phoenix Web Server",
+            "type": "shell",
+            "command": "mix phx.server",
+            "problemMatcher": []
+        },
+        {
+            "label": "IEx",
+            "type": "shell",
+            "command": "iex -S mix",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Mix - deps.get",
+            "type": "shell",
+            "command": "mix deps.get",
+            "problemMatcher": []
+        },
+        {
+            "label": "Mix - ecto.create (MIX_ENV=dev)",
+            "type": "shell",
+            "command": "mix ecto.create",
+            "problemMatcher": []
+        },
+        {
+            "label": "Mix - ecto.migrate (MIX_ENV=dev)",
+            "type": "shell",
+            "command": "mix ecto.migrate",
+            "problemMatcher": []
+        },
+        {
+            "label": "Mix - ecto.create (MIX_ENV=test)",
+            "type": "shell",
+            "command": "mix ecto.create",
+            "problemMatcher": [],
+            "options": {
+                "env": {
+                    "MIX_ENV": "test"
+                }
+            }
+        },
+        {
+            "label": "Mix - ecto.migrate (MIX_ENV=test)",
+            "type": "shell",
+            "command": "mix ecto.migrate",
+            "problemMatcher": [],
+            "options": {
+                "env": {
+                    "MIX_ENV": "test"
+                }
+            }
+        },
+        {
+            "label": "Mix - ecto.create",
+            "problemMatcher": [],
+            "dependsOn": [
+                "Mix - ecto.create (MIX_ENV=dev)",
+                "Mix - ecto.create (MIX_ENV=test)"
+            ],
+        },
+        {
+            "label": "Mix - ecto.migrate",
+            "problemMatcher": [],
+            "dependsOn": [
+                "Mix - ecto.migrate (MIX_ENV=dev)",
+                "Mix - ecto.migrate (MIX_ENV=test)"
+            ]
+        },
+        {
+            "label": "Install Assets",
+            "type": "shell",
+            "command": "npm install && node node_modules/webpack/bin/webpack.js --mode development",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceRoot}/apps/phoenix_live_page_starter_app_web/assets"
+            }
+        }
+    ]
+}

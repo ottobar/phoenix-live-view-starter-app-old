@@ -1,0 +1,20 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7.12
+    ports:
+      - 8806:3306
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+  app:
+    build:
+      context: .
+    volumes:
+      - ..:/umbrella
+      - ~/.gitconfig:/root/.gitconfig
+      - ~/.ssh/id_rsa:/root/.ssh/id_rsa
+    ports:
+      - '4000:4000'
+    command: sleep infinity
+    depends_on:
+      - db
