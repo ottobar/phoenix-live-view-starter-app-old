@@ -37,8 +37,9 @@ defmodule PhoenixLivePageStarterApp.MixProject do
   defp deps do
     [
       {:ecto_sql, "~> 3.0"},
-      {:mariaex, ">= 0.0.0"},
-      {:jason, "~> 1.0"}
+      {:ex_guard, "~> 1.3", only: [:test]},
+      {:jason, "~> 1.0"},
+      {:mariaex, ">= 0.0.0"}
     ]
   end
 

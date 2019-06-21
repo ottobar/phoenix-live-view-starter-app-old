@@ -18,7 +18,7 @@ defmodule PhoenixLivePageStarterAppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "live-page", LivePageController, :index
+    get "/live-page", LivePageController, :index
   end
 
   # Other scopes may use custom stacks.

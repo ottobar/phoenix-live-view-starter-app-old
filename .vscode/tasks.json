@@ -17,15 +17,36 @@
             }
         },
         {
-            "label": "Guard",
+            "label": "Guard - App",
             "type": "shell",
             "command": "mix guard",
             "problemMatcher": [],
             "options": {
+                "cwd": "${workspaceRoot}/apps/phoenix_live_page_starter_app",
                 "env": {
                     "MIX_ENV": "test"
                 }
             }
+        },
+        {
+            "label": "Guard - Web",
+            "type": "shell",
+            "command": "mix guard",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceRoot}/apps/phoenix_live_page_starter_app_web",
+                "env": {
+                    "MIX_ENV": "test"
+                }
+            }
+        },
+        {
+            "label": "Guard",
+            "problemMatcher": [],
+            "dependsOn": [
+                "Guard - App",
+                "Guard - Web"
+            ],
         },
         {
             "label": "Phoenix Web Server",
