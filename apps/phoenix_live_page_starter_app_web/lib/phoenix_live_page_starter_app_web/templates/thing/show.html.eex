@@ -8,13 +8,13 @@
     <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Live Page <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="<%= Routes.page_path(@conn, :index) %>">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/things">Things</a>
+                <a class="nav-link" href="<%= Routes.live_page_path(@conn, :index) %>">Live Page</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Things <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Disabled</a>
@@ -32,11 +32,46 @@
     </div>
 </nav>
 
-<main class="main" role="main">
-    <div class="jumbotron">
-        <div class="container text-center">
-            <h1 class="display-4">Thing <%= @thing %></h1>
-            <button type="button" class="btn btn-primary" phx-click="thingamabobber">Thingamabobber</button>
-        </div>
-    </div>
-</main>
+<h1>Show Thing</h1>
+
+<ul>
+
+    <li>
+        <strong>Name:</strong>
+        <%= @thing.name %>
+    </li>
+
+    <li>
+        <strong>Description:</strong>
+        <%= @thing.description %>
+    </li>
+
+    <li>
+        <strong>Data:</strong>
+        <%= inspect(@thing.data) %>
+    </li>
+
+    <li>
+        <strong>Number:</strong>
+        <%= @thing.number %>
+    </li>
+
+    <li>
+        <strong>Amount:</strong>
+        <%= @thing.amount %>
+    </li>
+
+    <li>
+        <strong>Flag:</strong>
+        <%= @thing.flag %>
+    </li>
+
+    <li>
+        <strong>Event:</strong>
+        <%= @thing.event %>
+    </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.thing_path(@conn, :edit, @thing) %></span>
+<span><%= link "Back", to: Routes.thing_path(@conn, :index) %></span>

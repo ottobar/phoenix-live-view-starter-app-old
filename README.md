@@ -19,6 +19,9 @@ Set up the development environment with:
   * Start Phoenix endpoint with `Phoenix Web Server` Task
   * Now you can visit [`localhost:4000`](http://localhost:4000) from your browser
 
+As an example, the [Phoenix HTML Resource Generator](https://hexdocs.pm/phoenix/Mix.Tasks.Phx.Gen.Html.html) was run with:
+
+    mix phx.gen.html Thingamabobbers Thing things name:string description:text data:map number:integer amount:decimal flag:boolean event:naive_datetime
 
 ## Running Tests
 Tests can be run with the `Tests` Task or you can use the `Guard` Task to run tests automatically.

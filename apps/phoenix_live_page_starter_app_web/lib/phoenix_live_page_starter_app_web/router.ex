@@ -19,6 +19,8 @@ defmodule PhoenixLivePageStarterAppWeb.Router do
 
     get "/", PageController, :index
     get "/live-page", LivePageController, :index
+
+    resources "/things", ThingController
   end
 
   # Other scopes may use custom stacks.

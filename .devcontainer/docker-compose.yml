@@ -3,7 +3,7 @@ services:
   db:
     image: mysql:5.7.12
     ports:
-      - 8806:3306
+      - 3306:3306
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
   app:

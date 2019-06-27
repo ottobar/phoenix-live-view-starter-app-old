@@ -8,13 +8,13 @@
     <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Live Page <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="<%= Routes.page_path(@conn, :index) %>">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/things">Things</a>
+                <a class="nav-link" href="<%= Routes.live_page_path(@conn, :index) %>">Live Page</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Things <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Disabled</a>
@@ -32,11 +32,8 @@
     </div>
 </nav>
 
-<main class="main" role="main">
-    <div class="jumbotron">
-        <div class="container text-center">
-            <h1 class="display-4">Thing <%= @thing %></h1>
-            <button type="button" class="btn btn-primary" phx-click="thingamabobber">Thingamabobber</button>
-        </div>
-    </div>
-</main>
+<h1>Edit Thing</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.thing_path(@conn, :update, @thing)) %>
+
+<span><%= link "Back", to: Routes.thing_path(@conn, :index) %></span>
