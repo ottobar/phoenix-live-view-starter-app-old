@@ -10,19 +10,19 @@
 use Mix.Config
 
 # Configure Mix tasks and generators
-config :phoenix_live_page_starter_app,
-  ecto_repos: [PhoenixLivePageStarterApp.Repo]
+config :phoenix_live_view_starter_app,
+  ecto_repos: [PhoenixLiveViewStarterApp.Repo]
 
-config :phoenix_live_page_starter_app_web,
-  ecto_repos: [PhoenixLivePageStarterApp.Repo],
-  generators: [context_app: :phoenix_live_page_starter_app]
+config :phoenix_live_view_starter_app_web,
+  ecto_repos: [PhoenixLiveViewStarterApp.Repo],
+  generators: [context_app: :phoenix_live_view_starter_app]
 
 # Configures the endpoint
-config :phoenix_live_page_starter_app_web, PhoenixLivePageStarterAppWeb.Endpoint,
+config :phoenix_live_view_starter_app_web, PhoenixLiveViewStarterAppWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "wkfuo9Zlqp9V/Q3sl2gHkRz+4bNYmGhxXuMXAo+qy2euif7oepIyCYGvlGKXWOpw",
-  render_errors: [view: PhoenixLivePageStarterAppWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: PhoenixLivePageStarterAppWeb.PubSub, adapter: Phoenix.PubSub.PG2],
+  render_errors: [view: PhoenixLiveViewStarterAppWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: PhoenixLiveViewStarterAppWeb.PubSub, adapter: Phoenix.PubSub.PG2],
   live_view: [
     signing_salt: "yg6VmECGZezwXdnmy+Z8GhRUSXg/r+L4"
   ]

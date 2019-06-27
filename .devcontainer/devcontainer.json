@@ -1,5 +1,5 @@
 {
-    "name": "Phoenix Live Page Starter App",
+    "name": "Phoenix Live View Starter App",
     "dockerComposeFile": "docker-compose.yml",
     "service": "app",
     "workspaceFolder": "/umbrella",

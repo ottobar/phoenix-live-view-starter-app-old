@@ -22,7 +22,7 @@
             "command": "mix guard",
             "problemMatcher": [],
             "options": {
-                "cwd": "${workspaceRoot}/apps/phoenix_live_page_starter_app",
+                "cwd": "${workspaceRoot}/apps/phoenix_live_view_starter_app",
                 "env": {
                     "MIX_ENV": "test"
                 }
@@ -34,7 +34,7 @@
             "command": "mix guard",
             "problemMatcher": [],
             "options": {
-                "cwd": "${workspaceRoot}/apps/phoenix_live_page_starter_app_web",
+                "cwd": "${workspaceRoot}/apps/phoenix_live_view_starter_app_web",
                 "env": {
                     "MIX_ENV": "test"
                 }
@@ -128,7 +128,7 @@
             "command": "npm install && node node_modules/webpack/bin/webpack.js --mode development",
             "problemMatcher": [],
             "options": {
-                "cwd": "${workspaceRoot}/apps/phoenix_live_page_starter_app_web/assets"
+                "cwd": "${workspaceRoot}/apps/phoenix_live_view_starter_app_web/assets"
             }
         }
     ]

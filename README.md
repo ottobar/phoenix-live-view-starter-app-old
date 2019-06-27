@@ -1,4 +1,4 @@
-# Phoenix Live Page Starter App
+# Phoenix Live View Starter App
 This starter app uses:
 
   * [Visual Studio Code](https://code.visualstudio.com) for code editing

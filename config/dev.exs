@@ -1,10 +1,10 @@
 use Mix.Config
 
 # Configure your database
-config :phoenix_live_page_starter_app, PhoenixLivePageStarterApp.Repo,
+config :phoenix_live_view_starter_app, PhoenixLiveViewStarterApp.Repo,
   username: "root",
   password: "",
-  database: "phoenix_live_page_starter_app_dev",
+  database: "phoenix_live_view_starter_app_dev",
   hostname: "db",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -15,7 +15,7 @@ config :phoenix_live_page_starter_app, PhoenixLivePageStarterApp.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :phoenix_live_page_starter_app_web, PhoenixLivePageStarterAppWeb.Endpoint,
+config :phoenix_live_view_starter_app_web, PhoenixLiveViewStarterAppWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -26,7 +26,7 @@ config :phoenix_live_page_starter_app_web, PhoenixLivePageStarterAppWeb.Endpoint
       "--mode",
       "development",
       "--watch-stdin",
-      cd: Path.expand("../apps/phoenix_live_page_starter_app_web/assets", __DIR__)
+      cd: Path.expand("../apps/phoenix_live_view_starter_app_web/assets", __DIR__)
     ]
   ]
 
@@ -55,14 +55,14 @@ config :phoenix_live_page_starter_app_web, PhoenixLivePageStarterAppWeb.Endpoint
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :phoenix_live_page_starter_app_web, PhoenixLivePageStarterAppWeb.Endpoint,
+config :phoenix_live_view_starter_app_web, PhoenixLiveViewStarterAppWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/phoenix_live_page_starter_app_web/{live,views}/.*(ex)$",
-      ~r"lib/phoenix_live_page_starter_app_web/templates/.*(eex)$",
-      ~r{lib/phoenix_live_page_starter_app_web/live/.*(ex)$}
+      ~r"lib/phoenix_live_view_starter_app_web/{live,views}/.*(ex)$",
+      ~r"lib/phoenix_live_view_starter_app_web/templates/.*(eex)$",
+      ~r{lib/phoenix_live_view_starter_app_web/live/.*(ex)$}
     ]
   ]
 

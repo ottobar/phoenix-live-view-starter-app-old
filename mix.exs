@@ -1,4 +1,4 @@
-defmodule PhoenixLivePageStarterApp.Umbrella.MixProject do
+defmodule PhoenixLiveViewStarterApp.Umbrella.MixProject do
   use Mix.Project
 
   def project do

@@ -12,7 +12,7 @@ database_url =
     For example: ecto://USER:PASS@HOST/DATABASE
     """
 
-config :phoenix_live_page_starter_app, PhoenixLivePageStarterApp.Repo,
+config :phoenix_live_view_starter_app, PhoenixLiveViewStarterApp.Repo,
   # ssl: true,
   url: database_url,
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
@@ -24,6 +24,6 @@ secret_key_base =
     You can generate one by calling: mix phx.gen.secret
     """
 
-config :phoenix_live_page_starter_app_web, PhoenixLivePageStarterAppWeb.Endpoint,
+config :phoenix_live_view_starter_app_web, PhoenixLiveViewStarterAppWeb.Endpoint,
   http: [:inet6, port: String.to_integer(System.get_env("PORT") || "4000")],
   secret_key_base: secret_key_base

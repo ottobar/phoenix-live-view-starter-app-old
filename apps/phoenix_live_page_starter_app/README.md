@@ -1,3 +1,0 @@
-# PhoenixLivePageStarterApp
-
-**TODO: Add description**
