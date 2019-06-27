@@ -2,7 +2,7 @@ defmodule PhoenixLivePageStarterAppWeb.PageLive do
   use Phoenix.LiveView
 
   def render(assigns) do
-    PhoenixLivePageStarterAppWeb.PageView.render("live_page.html", assigns)
+    PhoenixLivePageStarterAppWeb.PageLiveView.render("index.html", assigns)
   end
 
   def mount(_session, socket) do

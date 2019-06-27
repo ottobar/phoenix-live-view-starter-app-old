@@ -18,7 +18,7 @@ defmodule PhoenixLivePageStarterAppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/live-page", LivePageController, :index
+    get "/page-live", PageLiveController, :index
 
     resources "/things", ThingController
   end

@@ -1,4 +1,4 @@
-defmodule PhoenixLivePageStarterAppWeb.LivePageController do
+defmodule PhoenixLivePageStarterAppWeb.PageLiveController do
   use PhoenixLivePageStarterAppWeb, :controller
   alias Phoenix.LiveView
 
