@@ -5,8 +5,16 @@ defmodule PhoenixLivePageStarterAppWeb.PageLive do
     PhoenixLivePageStarterAppWeb.PageLiveView.render("index.html", assigns)
   end
 
-  def mount(_session, socket) do
-    {:ok, assign(socket, thing: "1")}
+  def mount(%{page_index_path: page_index_path, thing_index_path: thing_index_path}, socket) do
+    {
+      :ok,
+      assign(
+        socket,
+        page_index_path: page_index_path,
+        thing_index_path: thing_index_path,
+        thing: "1"
+      )
+    }
   end
 
   def handle_event("thingamabobber", _value, socket) do

@@ -14,7 +14,7 @@
                 <a class="nav-link" href="<%= Routes.page_live_path(@conn, :index) %>">Live Page</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Things</a>
+                <a class="nav-link" href="<%= Routes.thing_path(@conn, :index) %>">Things</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Disabled</a>
