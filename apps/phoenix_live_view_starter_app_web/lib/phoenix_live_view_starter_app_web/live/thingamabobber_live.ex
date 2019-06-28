@@ -2,11 +2,7 @@ defmodule PhoenixLiveViewStarterAppWeb.ThingamabobberLive do
   use Phoenix.LiveView
 
   def render(assigns) do
-    # PhoenixLiveViewStarterAppWeb.PageLiveView.render("index.html", assigns)
-    ~L"""
-    <h1 class="display-4">Thing <%= @thing %></h1>
-    <button type="button" class="btn btn-primary" phx-click="thingamabobber">Thingamabobber</button>
-    """
+    PhoenixLiveViewStarterAppWeb.ThingamabobberLiveView.render("thingamabobber.html", assigns)
   end
 
   def mount(_session, socket) do
