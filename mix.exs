@@ -4,8 +4,14 @@ defmodule PhoenixLiveViewStarterApp.Umbrella.MixProject do
   def project do
     [
       apps_path: "apps",
+      version: "0.1.0",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      releases: [
+        phoenix_live_view_starter_app: [
+          applications: [phoenix_live_view_starter_app_web: :permanent]
+        ]
+      ]
     ]
   end
 

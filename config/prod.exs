@@ -11,7 +11,8 @@ use Mix.Config
 # before starting your production server.
 config :phoenix_live_view_starter_app_web, PhoenixLiveViewStarterAppWeb.Endpoint,
   url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  server: true
 
 # ## SSL Support
 #
